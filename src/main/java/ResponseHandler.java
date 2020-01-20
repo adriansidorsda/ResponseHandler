@@ -11,7 +11,9 @@ public class ResponseHandler {
             Response response = responseService.createResponse("success");
             return response;
         } catch (IllegalArgumentException e) {
-            return null;
+            Response response = new Response();
+            response.setMessage("wyjatek");
+            return response;
         }
     }
 
